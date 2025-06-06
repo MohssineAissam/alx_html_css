@@ -47,8 +47,8 @@ article {
 }
 
 aside {
-  flex: 1; /* Takes 1 part of the available space */
-  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  flex: 1; 
+  overflow-y: auto;
   padding: 1rem;
   background-color: #f4f4f4;
 }
