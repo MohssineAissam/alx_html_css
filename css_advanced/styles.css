@@ -1,0 +1,455 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0; 
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+nav img {
+    height: 40px;
+    width: auto;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #C271FF;
+}
+main {
+    margin-top: 0;
+}
+.hero-section {
+    background:url('images/CSS_Advanced/Object.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 8rem 2rem 6rem; 
+}
+.hero-content {
+    text-align: center;
+    margin-bottom: 4rem; 
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.hero-keywords {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hero-keywords span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.btn-primary {
+    background: #C271FF;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+.btn-primary:hover {
+    background: #9b59cc;
+    transform: translateY(-2px);
+}
+
+.pros-section {
+    text-align: center;
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.pros-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white; 
+}
+.purple {
+color: #9b59cc;
+}
+.pros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 2rem;
+}
+.pro-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+}
+.pro-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.pro-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white; 
+}
+.pro-card p {
+    color: white; 
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.testimonial-section {
+    background: #C271FF;
+    padding: 4rem 2rem;
+    color: white;
+}
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.testimonial-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testimonial-content {
+    flex: 1;
+}
+.testimonial-content blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    position: relative;
+}
+.testimonial-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.testimonial-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.tutorials-section {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+}
+.tutorials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+.tutorials-grid {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; 
+    flex-wrap: nowrap; /
+}
+.tutorial-card {
+    flex: 1 1 350px;
+    max-width: 400px; 
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.tutorial-card:hover {
+    transform: translateY(-5px);
+}
+.image-wrapper {
+position: relative;
+display: inline-block;
+}
+.card-image {
+width: 100%;
+display: block;
+border-radius: 8px;
+}
+.play-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 40px; 
+height: 40px;
+transform: translate(-50%, -50%);
+pointer-events: none;
+opacity: 0.9;
+}
+.tutorial-card .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.tutorial-card .card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+.tutorial-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+.tutorial-card .card-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+.tutorial-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+.instructor-info {
+    display: flex;
+    align-items: center;
+}
+.instructor-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.instructor-info h4 {
+    color: #C271FF;
+    font-size: 1rem;
+}
+.rating {
+    display: flex;
+    gap: 0.2rem;
+}
+.rating i.fa-solid {
+    color: #C271FF;
+}
+
+.rating i.fa-regular {
+    color: #C271FF;
+    opacity: 0.5;
+}
+.duration {
+    color: #C271FF;
+    font-weight: bold;
+}
+
+.membership-section {
+    background: #071629;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.membership-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+.membership-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto;   /* Optional: scroll if too wide */
+    max-width: 100%;
+    margin: 0 auto 3rem;
+}
+.membership-item {
+    padding: 2rem 1rem;
+}
+.membership-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+.membership-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+}
+.membership-item p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+ .faq-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+ }
+.faq-section {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+}
+.faq-section h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: #111;
+    letter-spacing: 0.1rem;
+}
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+.faq-item h3 {
+    color: #111;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.faq-item p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+}   
+footer {
+background-color: #0A1B2A;
+padding: 2rem;
+color: white;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.footer-left img {
+    height: 25px;
+    width: auto;
+}
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+.social-icons i {
+    font-size: 1.5rem;
+    color: white;
+    background-color: white;
+    color: #0A1B2A;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.social-icons i:hover {
+    background-color: #C271FF;
+    color: white;
+}
+.footer-bottom {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }   
+    nav ul {
+        gap: 1.5rem;
+        justify-content: center;
+        width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-keywords {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .testimonial-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .tutorials-grid,
+    .membership-grid {
+        grid-template-columns: 1fr;
+    }
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .pros-section h2,
+    .tutorials-section h2,
+    .membership-section h2,
+    .faq-section h2 {
+        font-size: 2rem;
+    }
+    .pros-grid {
+        grid-template-columns: 1fr;
+    }
+}
